@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  overflow-x: hidden;
+  list-style: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  text-align: center;
+  background-color: rgb(255, 232, 201);
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(26, 26, 26);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(79, 79, 79);
+  border-radius: 50px;
+  height: 10px;
+  width: 10px;
+}
+nav {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  color: antiquewhite;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+nav.stick {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 1rem;
+  font-size: 1rem;
+}
+nav.stick .logo {
+  font-size: 2rem;
+}
+.logo {
+  color: rgb(230, 131, 1);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.logo:hover {
+  transform: scale(1.2);
+  opacity: .5;
+}
+.burger {
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+nav.stick .burger {
+  font-size: 2rem;
+}
+ul {
+  display: flex;
+  align-items: center;
+}
+ul li {
+  margin: 0 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+ul li.active,
+ul li:hover {
+  color: rgb(230, 131, 1);
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(img/fashion/4.jpg) center center no-repeat;
+  background-size: cover;
+  color: antiquewhite;
+  z-index: 2;
+}
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.container h1 {
+  margin-bottom: 3rem;
+}
+.contents h2 {
+  margin: 2rem;
+}
+.contents p {
+  margin: 3rem;
+  text-align: justify;
+}
+@media screen and (max-width: 992px) {
+  nav {
+    font-size: 1rem;
+  }
+  ul li {
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  ul {
+    display: none;
+  }
+  .burger {
+    display: inline;
+  }
+}
